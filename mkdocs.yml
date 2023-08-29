@@ -1,0 +1,16 @@
+site_name: Reset Windows Update Tool
+site_description: Este documento sirve como guía para describir las secuencias correctas del proceso para utilizar la Herramienta Restablecer Windows Update.
+site_author: Manuel Gil
+repo_url: https://github.com/wureset-tools/docs-brazil
+theme: readthedocs
+extra_css:
+  - assets/css/main.css
+nav:
+  - index.md
+  - getting-started.md
+  - usage.md
+  - diagnostic.md
+  - reset-components.md
+  - troubleshooting.md
+  - donate.md
+  - faq.md
