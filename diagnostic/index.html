@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Manuel Gil" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Diagnóstico - Reset Windows Update Tool</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/css/main.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Diagn\u00f3stico";
+        var mkdocs_page_input_path = "diagnostic.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Reset Windows Update Tool
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Inicio</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../getting-started/">Introdução</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../usage/">Uso</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Diagnóstico</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#conteudo">Conteúdo</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ponto-de-restauracao">Ponto de restauração</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#remover-arquivos-temporarios">Remover arquivos temporários</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#redefinir-o-internet-explorer">Redefinir o Internet Explorer</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reinicie-seu-pc">Reinicie seu PC</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#alterar-configuracoes-do-winsock">Alterar configurações do Winsock</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ferramentas-fix-it">Ferramentas Fix-it</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../reset-components/">Redefinir componentes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Solução de problemas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../donate/">Doação</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../faq/">Perguntas frequentes</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Reset Windows Update Tool</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li class="breadcrumb-item active">Diagnóstico</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/wureset-tools/docs-brazil/edit/master/docs/diagnostic.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="diagnostico">Diagnóstico</h1>
+<p>O conteúdo principal dessa ferramenta é redefinir os componentes do Windows Update. No entanto, o desenvolvimento da ferramenta nos permite executar outros processos de solução de problemas.</p>
+<p>Os processos de solução de problemas podem ser divididos em três grupos:</p>
+<dl>
+<dt>Processos de controle</dt>
+<dd>estes são processos simples que podem envolver pequenas alterações no sistema, por exemplo: Restaurar conexões com a Internet ou reiniciar o computador.<dd>
+<dt>Processos de correção</dt>
+<dd>são eles que nos permitem resolver problemas importantes no sistema, por exemplo: Redefinir componentes do Windows Update ou verificar arquivos de sistema protegidos.</dd>
+<dt>Processos invasivos</dt>
+<dd>eles são os que sugerem reparar ou reinstalar o sistema.</dd>
+</dl>
+
+<p>É recomendável executar alguns testes para simplificar o incidente e encontrar a melhor solução.</p>
+<blockquote>
+<h3 id="conteudo">Conteúdo</h3>
+<p><a href="#ponto-de-restauracao">Ponto de restauração</a> <br />
+<a href="#remover-arquivos-temporarios">Remover arquivos temporários</a> <br />
+<a href="#redefinir-o-internet-explorer">Redefinir o Internet Explorer</a> <br />
+<a href="#reinicie-seu-pc">Reinicie seu PC</a> <br />
+<a href="#alterar-configuracoes-do-winsock">Alterar configurações do Winsock</a> <br />
+<a href="#ferramentas-fix-it">Ferramentas Fix-it</a></p>
+</blockquote>
+<h2 id="ponto-de-restauracao">Ponto de restauração</h2>
+<p>Caso algo falhe, o computador pode ser restaurado no último ponto de restauração.</p>
+<p>Para criar um ponto de restauração, no menu principal, selecione a primeira opção. Esta opção abre a janela de proteção do sistema.</p>
+<p>Nesse local, você pode criar um ponto de restauração. Basta pressionar o botão "Criar".</p>
+<p>Se esta opção estiver desativada, pressione o botão "Configurar" e selecione "Ativar proteção do sistema".</p>
+<h2 id="remover-arquivos-temporarios">Remover arquivos temporários</h2>
+<p>Para excluir arquivos temporários, selecione a opção "Excluir arquivos temporários do Windows". Esta opção remove automaticamente arquivos temporários.</p>
+<h2 id="redefinir-o-internet-explorer">Redefinir o Internet Explorer</h2>
+<p>Para redefinir o Internet Explorer, selecione a opção "Abrir opções do Internet Explorer". Abra as opções da Internet.</p>
+<p>Nesta janela, selecione a guia "Avançado" e pressione o botão "Redefinir".</p>
+<h2 id="reinicie-seu-pc">Reinicie seu PC</h2>
+<p>Sempre que um processo de solução do sistema é realizado, é recomendável reiniciar o computador para salvar as alterações.</p>
+<p>Você pode reiniciar o seu PC manualmente ou automaticamente através da opção "Reiniciar o seu PC". Essa opção permite 1 minuto para salvar o trabalho que está sendo realizado.</p>
+<h2 id="alterar-configuracoes-do-winsock">Alterar configurações do Winsock</h2>
+<p>Para restaurar as conexões com a Internet, selecione a opção "Redefinir configurações do Winsock".</p>
+<p>Essa opção restaura as configurações de acesso à Internet, remove as restrições de acesso e corrige erros como 0x8024042C e outros.</p>
+<h2 id="ferramentas-fix-it">Ferramentas Fix-it</h2>
+<p>É recomendável executar a ferramenta Fix-It para Windows Update. Para isso, selecione a opção "Explorar outras soluções locais".</p>
+<p>O "Solução de problemas com o Windows Update" mostra um código de erro que nos ajudará a encontrar a solução para o nosso incidente. Se esta opção não mostrar o código de erro, uma ferramenta "Fix-it" poderá ser baixada para procurar o código de erro.</p>
+<p>Windows 10: <a href="https://aka.ms/wudiag">https://aka.ms/wudiag</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../usage/" class="btn btn-neutral float-left" title="Uso"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../reset-components/" class="btn btn-neutral float-right" title="Redefinir componentes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/wureset-tools/docs-brazil" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../usage/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../reset-components/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

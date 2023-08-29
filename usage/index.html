@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Manuel Gil" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Uso - Reset Windows Update Tool</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/css/main.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Uso";
+        var mkdocs_page_input_path = "usage.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Reset Windows Update Tool
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Inicio</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../getting-started/">Introdução</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Uso</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#conteudo">Conteúdo</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#executar-como-administrador">Executar como administrador</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#como-executar-um-programa-como-administrador">Como executar um programa como administrador</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#linha-de-comando">Linha de comando</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../diagnostic/">Diagnóstico</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../reset-components/">Redefinir componentes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Solução de problemas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../donate/">Doação</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../faq/">Perguntas frequentes</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Reset Windows Update Tool</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li class="breadcrumb-item active">Uso</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/wureset-tools/docs-brazil/edit/master/docs/usage.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="uso">Uso</h1>
+<p>A ferramenta "Windows Update Reset" utiliza funcionalidades de linha de comando para executar seus processos. É crucial notar que certas funções de restauração podem não se encontrar disponíveis em todas as edições do Windows. A ferramenta identificará essas limitações para mitigar possíveis erros.</p>
+<p>Para aplicar as correções requeridas, simplesmente insira o número associado à função desejada e pressione a tecla "Enter".</p>
+<blockquote>
+<h3 id="conteudo">Conteúdo</h3>
+<p><a href="#executar-como-administrador">Executar como administrador</a> <br />
+<a href="#linha-de-comando">Linha de comando</a></p>
+</blockquote>
+<h2 id="executar-como-administrador">Executar como administrador</h2>
+<p><strong>User Account Control</strong> (UAC) é um recurso obrigatório de controle de acesso introduzido nos sistemas operacionais Windows Vista e Windows Server 2008 da Microsoft, com uma versão mais descontraída também presente no Windows 7, Windows Server 2008 R2, Windows 8, Windows Server 2012 e Windows 10. Seu objetivo é melhorar a segurança do Microsoft Windows, limitando o software do aplicativo a privilégios de usuário padrão até que um administrador autorize um aumento ou elevação. Dessa maneira, somente aplicativos confiáveis ​​do usuário podem receber privilégios administrativos, e o malware deve ser impedido de comprometer o sistema operacional. Em outras palavras, uma conta de usuário pode ter privilégios de administrador atribuídos, mas os aplicativos que o usuário executa não herdam esses privilégios, a menos que sejam aprovados previamente ou explicitamente autorizados pelo usuário.</p>
+<h3 id="como-executar-um-programa-como-administrador">Como executar um programa como administrador</h3>
+<p>Para executar um programa como administrador, siga estas etapas:</p>
+<ol>
+<li>Clique no ícone usado para executar o programa e clique em <strong>Executar como administrador</strong>.</li>
+<li>Quando for solicitada uma senha ou confirmação de administrador, digite a senha do administrador ou clique em <strong>continuar</strong>.</li>
+</ol>
+<p>Para alguns ícones de programa, a opção <strong>Executar como administrador</strong> não está disponível no menu de contexto. Para esses ícones de programa, siga estas etapas:</p>
+<ol>
+<li>Clique no ícone usado para executar o programa e clique em <strong>Propriedades</strong>. Na guia <strong>atalho</strong> da caixa <strong>destino</strong> contém o local e o nome do arquivo do programa.</li>
+<li>Abra a pasta que contém o arquivo de programa.</li>
+<li>Clique no arquivo do programa e clique em <strong>Executar como administrador</strong>. Se você for solicitado uma senha de administrador ou confirmação, digite a senha ou clique em <strong>continuar</strong>.</li>
+</ol>
+<p>Se você precisar executar um programa como administrador, é aconselhável configurá-lo para ser executado automaticamente como administrador. Para fazer isso, execute as seguintes etapas:</p>
+<ol>
+<li>Clique no ícone usado para executar o programa e clique em <strong>Propriedades</strong>.</li>
+<li>Na guia <strong>compatibilidade</strong>, clique para selecionar a caixa de seleção <strong>execute este programa como administrador</strong> e clique em <strong>OK</strong>.</li>
+</ol>
+<p>A guia <strong>compatibilidade</strong> não está disponível para alguns ícones de programa. Para esses ícones de programa, siga estas etapas:</p>
+<ol>
+<li>Clique no ícone usado para executar o programa e clique em <strong>Propriedades</strong>. Na guia <strong>atalho</strong> da caixa <strong>destino</strong> contém o local e o nome do arquivo do programa.</li>
+<li>Abra a pasta que contém o arquivo de programa.</li>
+<li>Clique no arquivo do programa e clique em <strong>Propriedades</strong>.</li>
+<li>Na guia <strong>compatibilidade</strong>, clique para selecionar a caixa de seleção <strong>execute este programa como administrador</strong> e clique em <strong>OK</strong>.</li>
+</ol>
+<div align="center">
+    <img src="https://brasil.wureset.com/assets/images/runas.gif" alt="contextual menu run as an admin">
+</div>
+<p><br /></p>
+<p>Para mais informações, consulte a <a href="https://support.microsoft.com/pt-br/kb/922708">referência</a></p>
+<h2 id="linha-de-comando">Linha de comando</h2>
+<p>Reset Windows Update Tool pode ser usado na linha de comando da seguinte maneira:</p>
+<pre><code>$ WURESET [/reset][/search][/clean:{temp|regs|sock}][/sfc][/dism:{scan|check|repair|clean}]
+</code></pre>
+<p>Aqui estão listadas entre parênteses as várias opções que podem ser usadas com a ferramenta. Essas opções incluem reiniciar a ferramenta, verificar se há atualizações, limpar arquivos temporários ou valores de registro, executar o Verificador de arquivos do sistema (SFC) e executar o DISM para verificar, reparar ou limpar a imagem do sistema.</p>
+<p><strong>Lista de Parâmetros</strong></p>
+<table border="0" cellpadding="4">
+    <tr>
+        <th>
+            Parâmetro
+        </th>
+        <th>
+            Descrição
+        </th>
+        <th>
+            Abreviação
+        </th>
+        <th>
+            Exemplo
+        </th>
+    </tr>
+    <tr>
+        <td>
+            reset
+        </td>
+        <td>
+            Redefina os componentes do Windows Update.
+        </td>
+        <td>
+        </td>
+        <td>
+            /reset <br />
+            -reset
+        </td>
+    </tr>
+    <tr>
+        <td>
+            search
+        </td>
+        <td>
+            Verifique se há atualizações.
+        </td>
+        <td>
+        </td>
+        <td>
+            /search <br />
+            -search
+        </td>
+    </tr>
+    <tr>
+        <td>
+            clean
+        </td>
+        <td>
+            Opções de limpeza.
+        </td>
+        <td>
+        </td>
+        <td>
+            /clean:temp <br />
+            /clean:regs:temp <br />
+            -clean:temp <br />
+            -clean:sock
+        </td>
+    </tr>
+    <tr>
+        <td>
+            sfc
+        </td>
+        <td>
+            Examine todos os arquivos protegidos do sistema.
+        </td>
+        <td>
+        </td>
+        <td>
+            /sfc <br />
+            -sfc
+        </td>
+    </tr>
+    <tr>
+        <td>
+            dism
+        </td>
+        <td>
+            Opções do DISM.
+        </td>
+        <td>
+        </td>
+        <td>
+            /dism:scan:repair:clean <br />
+            -dism:check:repair
+        </td>
+    </tr>
+    <tr>
+        <td>
+            help
+        </td>
+        <td>
+            Mostre uma mensagem de ajuda.
+        </td>
+        <td>
+            <b>h</b> o <b>?</b>
+        </td>
+        <td>
+            /help <br />
+            /h <br />
+            /? <br />
+            -help <br />
+            -h <br />
+            -?
+        </td>
+    </tr>
+    <tr>
+        <td>
+            version
+        </td>
+        <td>
+            Mostra uma mensagem de versão.
+        </td>
+        <td>
+            <b>v</b>
+        </td>
+        <td>
+            /version <br />
+            /v <br />
+            -version <br />
+            -v
+        </td>
+    </tr>
+</table>
+
+<p><strong>Amostra de uso:</strong></p>
+<div>
+    <img src="https://brasil.wureset.com/assets/images/commands.gif" alt="example of command line">
+</div>
+<p><br /></p>
+<p>Para verificar a versão</p>
+<div>
+    <img src="https://brasil.wureset.com/assets/images/version.gif" alt="get version with command line">
+</div>
+<p><br /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../getting-started/" class="btn btn-neutral float-left" title="Introdução"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../diagnostic/" class="btn btn-neutral float-right" title="Diagnóstico">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/wureset-tools/docs-brazil" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../getting-started/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../diagnostic/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
